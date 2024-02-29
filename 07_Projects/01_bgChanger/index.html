@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background Changer</title>
+  </head>
+  <style>
+    .parent {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .child {
+      width: 200px;
+      height: 200px;
+    }
+  </style>
+  <body>
+    <div class="parent">
+      <div id="yellow" style="background-color: yellow" class="child"></div>
+      <div id="black" style="background-color: black" class="child"></div>
+      <div id="blue" style="background-color: blue" class="child"></div>
+      <div id="green" style="background-color: green" class="child"></div>
+    </div>
+  </body>
+  <script>
+    const buttons = document.querySelectorAll(".child");
+    const parent = document.querySelector("body");
+    buttons.forEach((button) => {
+      button.addEventListener("click", (e) => {
+        if (e.target.id === "yellow")
+          parent.style.backgroundColor = e.target.id;
+        if (e.target.id === "black")
+          parent.style.backgroundColor = e.target.id;
+        if (e.target.id === "blue")
+          parent.style.backgroundColor = e.target.id;
+        if (e.target.id === "green")
+          parent.style.backgroundColor = e.target.id;
+      });
+    });
+  </script>
+</html>
